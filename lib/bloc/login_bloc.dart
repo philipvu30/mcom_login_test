@@ -1,4 +1,5 @@
 import 'package:mcom_login_test/bloc/bloc.dart';
+import 'package:mcom_login_test/constants.dart';
 import 'package:mcom_login_test/login_validation.dart';
 import 'package:rxdart/rxdart.dart';
 
@@ -18,10 +19,10 @@ class LoginBloc with LoginValidation implements Bloc {
   Function(String) get passwordChange => _passwordController.sink.add;
 
   String authValue() {
-    return (_emailController.value == 'demo@mcom.app' &&
-            _passwordController.value == '12345678')
-        ? 'Login successful'
-        : 'Failed to login';
+    return (_emailController.value == kValidEmail &&
+            _passwordController.value == kValidPassword)
+        ? kLoginSuccessful
+        : kLoginFailed;
   }
 
   @override

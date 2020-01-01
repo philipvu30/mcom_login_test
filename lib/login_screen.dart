@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 
+import 'constants.dart';
+
 class LoginScreen extends StatefulWidget {
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -228,7 +230,7 @@ class _LoginScreenState extends State<LoginScreen> {
       padding: const EdgeInsets.all(16.0),
       child: Container(
         child: Image.asset(
-          'assets/logo.png',
+          kLogo,
           fit: BoxFit.cover,
         ),
       ),
